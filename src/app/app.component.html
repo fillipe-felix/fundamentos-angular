@@ -1,12 +1,37 @@
 <!--Com change detection-->
 <input #meuInput ngModel type="text">
 Valor: {{ meuInput.value }}
+<br>
 
 <!--Forçando o change detection com o click-->
 <input #meuInput2 type="text">
 Valor: {{ meuInput2.value }}
 <button (click)="changeDetection()">Atualizar</button>
+<br>
 
 <!--Com two way data biding-->
-<input [(ngModel)]="teste" type="text">
-Valor: {{ teste }}
+<input [(ngModel)]="meuInput3" type="text">
+Valor: {{ meuInput3 }}
+<br>
+
+<!--Passagem por parametro e escopo-->
+<input #meuInput4 ngModel type="text">
+Valor: {{ meuInput4.value }}
+
+<button (click)="clicou(meuInput4)">Atualizar</button>
+
+<!--Escopo-->
+
+<div class="primo">
+  <!--  Primo: {{ inputPai.value }}-->
+</div>
+
+<!--os contextos sao criados pelos ng Ex: ngIf ngFor...-->
+<div *ngIf="true" class="pai">
+  Pai: <input #inputPai ngModel type="text">
+  Pai: {{ inputPai.value }}
+  <div class="filho">
+    Filho: <input #inputFilho type="text">
+    Filho: {{ inputPai.value }}
+  </div>
+</div>

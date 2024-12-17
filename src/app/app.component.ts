@@ -8,7 +8,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fundamentos-angular';
-  teste: string = 'Fillipe';
+  meuInput3: string = 'Fillipe';
 
   constructor(private _cdRef: ChangeDetectorRef) {
   }
@@ -16,4 +16,11 @@ export class AppComponent {
   changeDetection() {
     this._cdRef.detectChanges();
   }
+
+  clicou(meuInput4: HTMLInputElement) {
+    console.log(meuInput4.value);
+
+    meuInput4.value = 'Valor atualizado';
+  }
 }
+
