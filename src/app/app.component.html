@@ -35,3 +35,17 @@ Valor: {{ meuInput4.value }}
     Filho: {{ inputPai.value }}
   </div>
 </div>
+<br>
+
+<!--@ViewChild-->
+Meu input: <input #meuInput5 ngModel type="text">
+Valor: {{ meuInput5.value }}
+
+<button (click)="updateInputText()">Atualizar</button>
+<button (click)="focusInput()">Foco</button>
+<br>
+
+<div #minhaDiv>
+  Conteudo inicial
+</div>
+<button (click)="atualizarConteudoDiv()" type="text">Atualizar conteudo</button>
