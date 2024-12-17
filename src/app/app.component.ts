@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
+import { FilhoComponent } from './filho/filho.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ export class AppComponent {
 
   @ViewChild('meuInput5') meuInputEl!: ElementRef<HTMLInputElement>;
   @ViewChild('minhaDiv') minhaDivEl!: ElementRef<HTMLDivElement>;
+  @ViewChild('filhoComponent') filhoComponentRef!: FilhoComponent;
 
   constructor(private _cdRef: ChangeDetectorRef) {
   }
@@ -37,6 +39,11 @@ export class AppComponent {
 
   atualizarConteudoDiv() {
     this.minhaDivEl.nativeElement.textContent = 'Conteudo atualizado';
+  }
+
+  hello() {
+    this.filhoComponentRef.dizerOi();
+    this.filhoComponentRef.message = 'Eu disse oi';
   }
 }
 

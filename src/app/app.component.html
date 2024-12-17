@@ -49,3 +49,11 @@ Valor: {{ meuInput5.value }}
   Conteudo inicial
 </div>
 <button (click)="atualizarConteudoDiv()" type="text">Atualizar conteudo</button>
+<br>
+<br>
+
+<!--@ViewChild acessando filhos-->
+
+<app-filho #filhoComponent></app-filho>
+
+<button (click)="hello()">Hello</button>
