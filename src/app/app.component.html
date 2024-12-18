@@ -1,32 +1,37 @@
 <!--Com change detection-->
+<p>Com change detection</p>
 <input #meuInput ngModel type="text">
 Valor: {{ meuInput.value }}
 <br>
 
 <!--Forçando o change detection com o click-->
+<p>Forçando o change detection com o click</p>
 <input #meuInput2 type="text">
 Valor: {{ meuInput2.value }}
 <button (click)="changeDetection()">Atualizar</button>
 <br>
 
 <!--Com two way data biding-->
+<p>Com two way data biding</p>
 <input [(ngModel)]="meuInput3" type="text">
 Valor: {{ meuInput3 }}
 <br>
 
 <!--Passagem por parametro e escopo-->
+<p>Passagem por parametro e escopo</p>
 <input #meuInput4 ngModel type="text">
 Valor: {{ meuInput4.value }}
 
 <button (click)="clicou(meuInput4)">Atualizar</button>
 
 <!--Escopo-->
-
+<p>Escopo</p>
 <div class="primo">
   <!--  Primo: {{ inputPai.value }}-->
 </div>
 
 <!--os contextos sao criados pelos ng Ex: ngIf ngFor...-->
+<p>os contextos sao criados pelos ng Ex: ngIf ngFor...</p>
 <div *ngIf="true" class="pai">
   Pai: <input #inputPai ngModel type="text">
   Pai: {{ inputPai.value }}
@@ -38,6 +43,7 @@ Valor: {{ meuInput4.value }}
 <br>
 
 <!--@ViewChild-->
+<p>ViewChild</p>
 Meu input: <input #meuInput5 ngModel type="text">
 Valor: {{ meuInput5.value }}
 
@@ -53,7 +59,14 @@ Valor: {{ meuInput5.value }}
 <br>
 
 <!--@ViewChild acessando filhos-->
+<p>ViewChild acessando filhos</p>
 
 <app-filho #filhoComponent></app-filho>
 
 <button (click)="hello()">Hello</button>
+<br>
+<br>
+
+<!--@ViewChild configuracao STATIC-->
+<p>ViewChild configuracao STATIC</p>
+<input #meuInput6 type="text">
