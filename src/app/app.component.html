@@ -70,3 +70,12 @@ Valor: {{ meuInput5.value }}
 <!--@ViewChild configuracao STATIC-->
 <p>ViewChild configuracao STATIC</p>
 <input #meuInput6 type="text">
+
+<!--ViewChildren-->
+<p>ViewChildren</p>
+<button #meuButton (click)="changeColor($event)" *ngFor="let btn of buttonsList; let i = index"
+        class="btn-{{i}}"> {{ btn }}
+</button>
+<button (click)="resetButton()">Resetar</button>
+<button (click)="firstButton()">Pegar Primeiro</button>
+<button (click)="removerItem()">Remover</button>
